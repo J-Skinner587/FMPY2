@@ -15,7 +15,7 @@ public class Guard : MonoBehaviour
     //to wait frame
     public float waitEveryFrame = 0.5f;
 
-    private Animator anim = null; 
+    private Animator anim;
     // Use this for initialization
     void Start()
     {
@@ -28,8 +28,7 @@ public class Guard : MonoBehaviour
             wayPoints[i] = new Vector3(wayPoints[i].x, transform.position.y, wayPoints[i].z);
         }
         StartCoroutine(flollowPath());
-        controller = GetComponent<CharacterController>();
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>();
         if(anim == null)
         {
             Debug.LogError("Animator is Null");
