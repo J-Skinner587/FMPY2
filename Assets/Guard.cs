@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class Guard : MonoBehaviour
 {
-    //hold the transform of way points
+    public static event System.Action OnGuardHasSpottedPlayer;
+
     public Transform pathHolder;
-    //array of way points
+    Transform player;
+    Color originalSpotlightColour;
+
     Vector3[] wayPoints;
-    //use to move the guard
+
     public int moveSpeed;
-    //to rotate the guard
     public int rotateSpeed = 5;
-    //to wait frame
     public float waitEveryFrame = 0.5f;
+    public float timeToSpotPlayer = .5f;
+
+    public Light spotlight;
+    public float viewDistance;
+    public LayerMask viewMask;
+  
+    float viewAngle;
+    float playerVisibleTimer;
 
     private Animator anim;
-    // Use this for initialization
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        viewAngle = spotlight.spotAngle;
+        originalSpotlightColour = spotlight.color;
         //initialize the waypoint
         wayPoints = new Vector3[pathHolder.childCount];
         //save the value to the wayPoints
@@ -27,16 +39,57 @@ public class Guard : MonoBehaviour
             wayPoints[i] = pathHolder.GetChild(i).position;
             wayPoints[i] = new Vector3(wayPoints[i].x, transform.position.y, wayPoints[i].z);
         }
-        StartCoroutine(flollowPath());
+        StartCoroutine(followPath());
         anim = GetComponent<Animator>();
+
         if(anim == null)
         {
             Debug.LogError("Animator is Null");
         }
 
+
+    }
+
+    private void Update()
+    {
+        if(CanSeePlayer()) 
+        {
+            playerVisibleTimer += Time.deltaTime;
+        }
+        else
+        {
+            playerVisibleTimer -= Time.deltaTime;
+        }
+        playerVisibleTimer = Mathf.Clamp(playerVisibleTimer, 0, timeToSpotPlayer);
+        spotlight.color = Color.Lerp(originalSpotlightColour, Color.red, playerVisibleTimer / timeToSpotPlayer);
+
+        if(playerVisibleTimer >= timeToSpotPlayer)
+        {
+            if(OnGuardHasSpottedPlayer != null)
+            {
+                OnGuardHasSpottedPlayer();
+            }
+        }
+    }
+
+    bool CanSeePlayer()
+    {
+        if(Vector3.Distance(transform.position,player.position) < viewDistance)
+        {
+            Vector3 dirToPlayer = (player.position - transform.position).normalized;
+            float angleBetweenGuardAndPlayer = Vector3.Angle (transform.forward, dirToPlayer);
+            if(angleBetweenGuardAndPlayer < viewAngle / 2f)
+            {
+                if(!Physics.Linecast (transform.position,player.position, viewMask))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
     //follow the path continuously 
-    IEnumerator flollowPath()
+    IEnumerator followPath()
     {   //set the positiuon to starting pos
         transform.position = wayPoints[0];
         //keep track of the index
@@ -102,10 +155,8 @@ public class Guard : MonoBehaviour
             previousPos = wayPoint.position;
         }
         Gizmos.DrawLine(previousPos, startPos);
-    }
-    // Update is called once per frame
-    void Update()
-    {
 
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position,transform.forward * viewDistance);
     }
 }
