@@ -10,10 +10,11 @@ namespace SojaExiles
 
 		public Animator openandclose;
 		public bool open;
-		public Transform Player;
+		public GameObject Player;
 
 		void Start()
 		{
+			Player = GameObject.FindWithTag("Player");
 			open = false;
 		}
 
@@ -22,7 +23,7 @@ namespace SojaExiles
 			{
 				if (Player)
 				{
-					float dist = Vector3.Distance(Player.position, transform.position);
+					float dist = Vector3.Distance(Player.transform.position, transform.position);
 					if (dist < 15)
 					{
 						if (open == false)
