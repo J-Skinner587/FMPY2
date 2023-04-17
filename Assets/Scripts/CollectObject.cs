@@ -1,52 +1,56 @@
+using SojaExiles;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using UnityEngine;
 
-public class CollectObject : MonoBehaviour
+namespace SojaExiles
 {
-    public bool collected;
-    private GameObject Player;
-    public GameObject Object;
-    int CollectedObjects;
-    void Start()
+    public class CollectObject : MonoBehaviour
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        collected = false;
-        Object.SetActive(true);
-        CollectedObjects = 0;
-    }
-    void OnMouseOver()
-    {
+        PlayerMovement player;
+        public bool collected;
+        private GameObject Player;
+        public GameObject Object;
+            void Start()
         {
-            if (Player)
+            Player = GameObject.FindGameObjectWithTag("Player");
+            collected = false;
+            Object.SetActive(true);
+        }
+        void OnMouseOver()
+        {
             {
-                float dist = Vector3.Distance(Player.transform.position, transform.position);
-                if (dist < 10)
+                if (Player)
                 {
-                    print(this.name);
-                    if (collected == false)
+                    float dist = Vector3.Distance(Player.transform.position, transform.position);
+                    if (dist < 10)
                     {
-                        if (Input.GetMouseButtonDown(0))
+                        print(this.name);
+                        if (collected == false)
                         {
-                            StartCoroutine(collect());
+                            if (Input.GetMouseButtonDown(0))
+                            {
+                                StartCoroutine(collect());
+                            }
                         }
+                        else
+                            return;
                     }
-                    else
-                        return;
                 }
+
             }
 
         }
 
-    }
+        IEnumerator collect()
+        {
+            print("you are opening the door");
+            collected = true;
 
-    IEnumerator collect()
-    {
-        print("you are opening the door");
-        collected = true;
-        CollectedObjects++;
-        yield return new WaitForSeconds(.5f);
-        Object.SetActive(false);
+            yield return new WaitForSeconds(.5f);
+            Object.SetActive(false);
 
+        }
     }
 }

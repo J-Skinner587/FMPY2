@@ -10,6 +10,7 @@ namespace SojaExiles
 
         public CharacterController controller;
 
+        public int TotalCollected;
         public float speed = 5f;
         public float gravity = -15f;
 
