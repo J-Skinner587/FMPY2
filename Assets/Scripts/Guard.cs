@@ -41,13 +41,6 @@ public class Guard : MonoBehaviour
         }
         StartCoroutine(followPath());
         anim = GetComponent<Animator>();
-
-        if(anim == null)
-        {
-            Debug.LogError("Animator is Null");
-        }
-
-
     }
 
     private void Update()

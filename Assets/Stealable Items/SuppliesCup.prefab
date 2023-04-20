@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 3812435039382075229}
   - component: {fileID: 5982871559055439344}
   - component: {fileID: 6046746642936515059}
+  - component: {fileID: 3319678579190047340}
   m_Layer: 0
   m_Name: SuppliesCup
   m_TagString: Untagged
@@ -237,7 +238,7 @@ Transform:
   - {fileID: 8866760588299034305}
   - {fileID: 5957990986068561174}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3812435039382075229
 MeshFilter:
@@ -302,6 +303,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.123842195, y: 0.15866527, z: 0.123842195}
   m_Center: {x: 0.0000000037252903, y: 0.079332605, z: -0.0000000055879354}
+--- !u!114 &3319678579190047340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354261793980984119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
+  Object: {fileID: 354261793980984119}
 --- !u!1 &5931912426678838197
 GameObject:
   m_ObjectHideFlags: 0

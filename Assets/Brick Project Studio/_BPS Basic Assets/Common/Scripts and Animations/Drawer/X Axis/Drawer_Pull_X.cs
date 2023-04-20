@@ -27,7 +27,6 @@ namespace SojaExiles
 					float dist = Vector3.Distance(Player.transform.position, transform.position);
 					if (dist < 10)
 					{
-						print("object name");
 						if (open == false)
 						{
 							if (Input.GetMouseButtonDown(0))
@@ -56,7 +55,7 @@ namespace SojaExiles
 
 		IEnumerator opening()
 		{
-			print("you are opening the door");
+			print("Is Open");
 			pull_01.Play("openpull_01");
 			open = true;
 			yield return new WaitForSeconds(.5f);
@@ -64,7 +63,7 @@ namespace SojaExiles
 
 		IEnumerator closing()
 		{
-			print("you are closing the door");
+			print("Is Closed");
 			pull_01.Play("closepush_01");
 			open = false;
 			yield return new WaitForSeconds(.5f);

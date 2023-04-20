@@ -1,18 +1,27 @@
 using SojaExiles;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
-namespace SojaExiles
+namespace Collect
 {
     public class CollectObject : MonoBehaviour
     {
-        PlayerMovement player;
+        [SerializeField]
+        private CountdownTimer ui;
         public bool collected;
-        private GameObject Player;
+        GameObject Player;
         public GameObject Object;
-            void Start()
+        public int Value;
+
+
+        void Start()
         {
             Player = GameObject.FindGameObjectWithTag("Player");
             collected = false;
@@ -26,7 +35,6 @@ namespace SojaExiles
                     float dist = Vector3.Distance(Player.transform.position, transform.position);
                     if (dist < 10)
                     {
-                        print(this.name);
                         if (collected == false)
                         {
                             if (Input.GetMouseButtonDown(0))
@@ -45,12 +53,11 @@ namespace SojaExiles
 
         IEnumerator collect()
         {
-            print("you are opening the door");
+            Debug.Log("You Collected" + this.name);
             collected = true;
-
             yield return new WaitForSeconds(.5f);
             Object.SetActive(false);
-
+            ui.Total += Value;
         }
     }
 }

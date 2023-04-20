@@ -112,3 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collected: 0
   Object: {fileID: 1817072745897592}
+  Value: 300
+  text: {fileID: 0}
+  Total: 0

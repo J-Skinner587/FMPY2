@@ -18,7 +18,6 @@ namespace SojaExiles
 
         bool isGrounded;
 
-        // Update is called once per frame
         void Update()
         {
 
