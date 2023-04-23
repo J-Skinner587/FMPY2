@@ -2612,10 +2612,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui: {fileID: 0}
   collected: 0
   Object: {fileID: 2570282782222747252}
-  Value: 0
+  Value: 25
 --- !u!1 &2774471233460298349
 GameObject:
   m_ObjectHideFlags: 0

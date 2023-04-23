@@ -14,7 +14,6 @@ namespace Collect
     public class CollectObject : MonoBehaviour
     {
         [SerializeField]
-        private CountdownTimer ui;
         public bool collected;
         GameObject Player;
         public GameObject Object;
@@ -57,7 +56,7 @@ namespace Collect
             collected = true;
             yield return new WaitForSeconds(.5f);
             Object.SetActive(false);
-            ui.Total += Value;
+            CountdownTimer.Total += Value;
         }
     }
 }

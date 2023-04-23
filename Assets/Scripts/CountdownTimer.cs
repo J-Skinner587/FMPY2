@@ -10,7 +10,7 @@ public class CountdownTimer : MonoBehaviour
     float currentTime = 0f;
     float startingTime = 120f;
 
-    public int Total = 0;
+    public static int Total = 0;
     public int MoneyText;
     public int Take;
 
@@ -27,7 +27,7 @@ public class CountdownTimer : MonoBehaviour
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        timerText.text = currentTime.ToString();
+        timerText.text = currentTime.ToString("0");
 
         if(currentTime <= 0)
         {

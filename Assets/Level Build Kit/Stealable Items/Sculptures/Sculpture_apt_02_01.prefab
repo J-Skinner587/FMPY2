@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6898140218229105737}
   - component: {fileID: 3113394675952139687}
   - component: {fileID: 2270064789085564027}
+  - component: {fileID: 1056566935893620640}
   m_Layer: 0
   m_Name: Sculpture_apt_02_01
   m_TagString: Untagged
@@ -29,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -95,3 +98,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17039253, y: 0.45015174, z: 0.489078}
   m_Center: {x: 0, y: 0.22507581, z: 0.08397966}
+--- !u!114 &1056566935893620640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442901499368516231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
+  Object: {fileID: 6442901499368516231}
+  Value: 75
