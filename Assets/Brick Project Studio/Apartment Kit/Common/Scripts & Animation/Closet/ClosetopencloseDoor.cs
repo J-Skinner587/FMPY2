@@ -10,19 +10,20 @@ namespace SojaExiles
 
 		public Animator Closetopenandclose;
 		public bool open;
-		public Transform Player;
+		public GameObject Player;
 
 		void Start()
 		{
 			open = false;
-		}
+            Player = GameObject.FindGameObjectWithTag("Player");
+        }
 
 		void OnMouseOver()
 		{
 			{
 				if (Player)
 				{
-					float dist = Vector3.Distance(Player.position, transform.position);
+					float dist = Vector3.Distance(Player.transform.position, transform.position);
 					if (dist < 15)
 					{
 						if (open == false)
