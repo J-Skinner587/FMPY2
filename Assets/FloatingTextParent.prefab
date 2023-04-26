@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7585157466871487879}
   - component: {fileID: 7585157466871487928}
   - component: {fileID: 7585157466871487929}
-  - component: {fileID: 7585157466871487878}
   - component: {fileID: 7585157466871487931}
+  - component: {fileID: 2231616889589074198}
   m_Layer: 0
   m_Name: PopupText
   m_TagString: Untagged
@@ -174,18 +174,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 7585157466871487928}
   m_maskType: 0
---- !u!114 &7585157466871487878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7585157466871487876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d308470252cd0c547bc3752be915a176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &7585157466871487931
 Animator:
   serializedVersion: 4
@@ -206,6 +194,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2231616889589074198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7585157466871487876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d308470252cd0c547bc3752be915a176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeStart: 0.1
+  timeBtwChars: 0.1
+  leadingChar: 
+  leadingCharBeforeDelay: 0
 --- !u!1 &7585157467344016892
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,5 +240,5 @@ Transform:
   m_Children:
   - {fileID: 7585157466871487879}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
