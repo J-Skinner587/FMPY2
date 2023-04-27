@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class CountdownTimer : MonoBehaviour
 {
-    float currentTime = 0f;
+    public static float currentTime = 0f;
     float startingTime = 120f;
 
     public static int Total = 0;
@@ -32,6 +32,8 @@ public class CountdownTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime= 0;
+            timerText.text = "Time's Up";
+            Debug.Log("$$ Time Up $$");
         }
 
         MoneyText = Total;

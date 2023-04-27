@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5599452659419228336}
   - component: {fileID: 7023954199343835617}
   - component: {fileID: 3986346254287133668}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DoorFrame_Apt_02
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4762531027298604801}
   m_Father: {fileID: 0}
@@ -52,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -93,7 +95,7 @@ GameObject:
   - component: {fileID: 6492475602608855641}
   - component: {fileID: 8729003548105003937}
   - component: {fileID: 1642510477803799873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +112,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.062497854, y: -0.19661228, z: 0.58883584}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3725795500468870590}
   m_RootOrder: 0
@@ -133,6 +136,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -176,7 +180,7 @@ GameObject:
   - component: {fileID: 970761944794709226}
   - component: {fileID: 3165364041864694368}
   - component: {fileID: 3165364041864694369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClosetDoor_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,6 +197,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.059342206, y: -0.00000090116845, z: 0.7122296}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6492475602608855641}
   m_Father: {fileID: 4762531027298604801}
@@ -217,6 +222,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -289,7 +295,7 @@ GameObject:
   - component: {fileID: 5282455707208595338}
   - component: {fileID: 5282455707208595339}
   - component: {fileID: 5282455707208595337}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClosetDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,6 +312,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.1492963, y: 1.5004573, z: -0.7052653}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3725795500468870590}
   m_Father: {fileID: 5599452659419228336}
@@ -330,6 +337,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -390,7 +398,7 @@ MonoBehaviour:
   Player: {fileID: 0}
 --- !u!95 &5282455707208595337
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -403,6 +411,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1

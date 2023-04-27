@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3578302895700862210}
   - component: {fileID: 3578302895704253728}
   - component: {fileID: 3578302895703287776}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Frame_Apt_02
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

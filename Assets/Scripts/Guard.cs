@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Guard : MonoBehaviour
 {
-    public static event System.Action OnGuardHasSpottedPlayer;
-
     public Transform pathHolder;
     Transform player;
     Color originalSpotlightColour;
+
+    public GameObject CaughtUI;
+    public GameObject GameUI;
+    public GameObject Player;
 
     Vector3[] wayPoints;
 
@@ -22,12 +24,16 @@ public class Guard : MonoBehaviour
     public LayerMask viewMask;
   
     float viewAngle;
-    float playerVisibleTimer;
+    public float playerVisibleTimer;
+
 
     private Animator anim;
 
     void Start()
     {
+        Player.SetActive(true);
+        CaughtUI.gameObject.SetActive(false);
+        GameUI.gameObject.SetActive(true);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         viewAngle = spotlight.spotAngle;
         originalSpotlightColour = spotlight.color;
@@ -58,10 +64,7 @@ public class Guard : MonoBehaviour
 
         if(playerVisibleTimer >= timeToSpotPlayer)
         {
-            if(OnGuardHasSpottedPlayer != null)
-            {
-                OnGuardHasSpottedPlayer();
-            }
+            OnGuardHasSpottedPlayer();
         }
     }
 
@@ -151,5 +154,13 @@ public class Guard : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position,transform.forward * viewDistance);
+    }
+
+    public void OnGuardHasSpottedPlayer()
+    {
+        Debug.Log("Caught");
+        CaughtUI.gameObject.SetActive(true);
+        GameUI.gameObject.SetActive(false);
+        Player.gameObject.SetActive(false);
     }
 }

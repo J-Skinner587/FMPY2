@@ -37,13 +37,6 @@ public class RandomSpawner : MonoBehaviour
             chosenIndex++;
             Cumweight += items[chosenIndex].weight;
         }
-
         GameObject i = Instantiate(items[chosenIndex].gameObject, transform.position, Quaternion.identity) as GameObject;
     }
-
-    private void Update()
-    {
-        
-    }
-
 }

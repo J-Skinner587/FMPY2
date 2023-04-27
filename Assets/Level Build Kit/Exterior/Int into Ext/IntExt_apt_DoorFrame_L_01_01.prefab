@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6537932229130571048}
   - component: {fileID: 963706521}
   - component: {fileID: 963706522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Glass.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,6 +135,8 @@ MonoBehaviour:
   openandclose: {fileID: 963706521}
   open: 0
   Player: {fileID: 0}
+  locked: 0
+  FloatingTextPrefab: {fileID: 0}
 --- !u!1 &7087374068913756291
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +148,7 @@ GameObject:
   - component: {fileID: 4573949461778612589}
   - component: {fileID: 511947626698078657}
   - component: {fileID: 673236097460528446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handle.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,9 +232,9 @@ GameObject:
   - component: {fileID: 5714103820647978065}
   - component: {fileID: 6332899608810316741}
   - component: {fileID: 5523480312926818227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IntExt_apt_DoorFrame_L_01_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

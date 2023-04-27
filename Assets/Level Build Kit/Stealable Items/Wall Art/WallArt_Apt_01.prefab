@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 786328949249957652}
   - component: {fileID: 5672379646036150210}
   - component: {fileID: -688555325984489393}
+  - component: {fileID: 934178609348868938}
   m_Layer: 0
   m_Name: WallArt_Apt_01
   m_TagString: Untagged
@@ -264,7 +265,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui: {fileID: 0}
   collected: 0
   Object: {fileID: 8198272116638378021}
-  Value: 0
+  Value: 100
+--- !u!65 &934178609348868938
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8198272116638378021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3818259, y: 1.7818134, z: 0.073990084}
+  m_Center: {x: 0, y: 0, z: -0.036995042}

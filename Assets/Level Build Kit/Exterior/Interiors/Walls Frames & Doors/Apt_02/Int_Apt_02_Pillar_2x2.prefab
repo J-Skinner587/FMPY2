@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4775142502029322925}
   - component: {fileID: 4775142502028191853}
   - component: {fileID: 7352019266341557863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Int_Apt_02_Pillar_2x2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

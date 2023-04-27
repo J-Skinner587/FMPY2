@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 646888896590859792}
   - component: {fileID: 646888896589728976}
   - component: {fileID: 6164067049618795389}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Int_apt_02_Floor_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

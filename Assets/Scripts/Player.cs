@@ -20,8 +20,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-        Guard.OnGuardHasSpottedPlayer += Disabled;
-        StationaryGuard.OnGuardHasSpottedPlayer += Disabled;
     }
     void Update()
     {
@@ -37,7 +35,6 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
-        Guard.OnGuardHasSpottedPlayer -= Disabled;
         StationaryGuard.OnGuardHasSpottedPlayer -= Disabled;
     }
 }

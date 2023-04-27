@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2560334749434778324}
   - component: {fileID: 2560334749435908116}
   - component: {fileID: 967158613704318046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ext_Apt_01_Roof_Mid_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

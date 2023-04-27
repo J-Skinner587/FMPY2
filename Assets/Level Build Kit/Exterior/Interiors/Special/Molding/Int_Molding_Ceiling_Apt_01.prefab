@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7133542736947799490}
   - component: {fileID: 3673180235501673689}
   - component: {fileID: 6888742564613449852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Int_Molding_Ceiling_Apt_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

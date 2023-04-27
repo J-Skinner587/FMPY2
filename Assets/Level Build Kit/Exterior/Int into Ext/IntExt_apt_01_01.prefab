@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5554808888371505805}
   - component: {fileID: 2636350955382806885}
   - component: {fileID: 6363977742382256316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IntExt_apt_01_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 2654669758044237207}
   - component: {fileID: 641279548230536596}
   - component: {fileID: 2681227171109807291}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Glass.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}

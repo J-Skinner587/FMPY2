@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1191123524457870240}
   - component: {fileID: 880404183916772468}
   - component: {fileID: 8241529456372295956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ext_apt_01_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

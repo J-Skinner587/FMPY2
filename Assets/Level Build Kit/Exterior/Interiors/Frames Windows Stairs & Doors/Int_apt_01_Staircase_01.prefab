@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6298493336233793655}
   - component: {fileID: 7170756737053157428}
   - component: {fileID: 6666822125206671542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Int_apt_01_Staircase_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 702485154620323150}
   - component: {fileID: 1987204309242188590}
   - component: {fileID: 5777202487657363277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HandRail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

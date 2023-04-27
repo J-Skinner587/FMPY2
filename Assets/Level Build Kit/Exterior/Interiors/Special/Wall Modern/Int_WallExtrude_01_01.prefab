@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6349264773222133841}
   - component: {fileID: 6804476441667957827}
   - component: {fileID: 1436351713311154714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Int_WallExtrude_01_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

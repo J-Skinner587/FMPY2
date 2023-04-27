@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4638364655414247382}
   - component: {fileID: 4638364655414247383}
   - component: {fileID: 8003772031924347679}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Int_Apt_03_Corner_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

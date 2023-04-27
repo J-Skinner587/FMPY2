@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2710179656058026370}
   - component: {fileID: 77546560629600351}
   - component: {fileID: 6348989152987186514}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Int_Molding_Base_Apt_04
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

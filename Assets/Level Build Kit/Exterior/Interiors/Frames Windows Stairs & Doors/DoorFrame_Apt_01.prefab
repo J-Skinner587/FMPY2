@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8340291088075017803}
   - component: {fileID: 6072611403756079303}
   - component: {fileID: 7680454454043791720}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handle_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 8128322320853617336}
   - component: {fileID: 3067977037592614954}
   - component: {fileID: 2290637060804840758}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DoorFrame_Apt_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 7296751938604968508}
   - component: {fileID: 7296751938604968510}
   - component: {fileID: 7296751938604968511}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
