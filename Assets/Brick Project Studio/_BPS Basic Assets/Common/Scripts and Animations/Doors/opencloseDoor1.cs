@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SojaExiles
-
-{
 	public class opencloseDoor1 : MonoBehaviour
 	{
 
@@ -17,7 +14,6 @@ namespace SojaExiles
 			Player = GameObject.FindGameObjectWithTag("Player");
 			open = false;
 		}
-
 		void OnMouseOver()
 		{
 			{
@@ -70,4 +66,3 @@ namespace SojaExiles
 
 
 	}
-}
