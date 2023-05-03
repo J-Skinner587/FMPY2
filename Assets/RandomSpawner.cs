@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
+    public bool isDrawer;
+   
     [System.Serializable]
+
     public struct Spawnable
     {
         public GameObject gameObject;
@@ -37,6 +40,14 @@ public class RandomSpawner : MonoBehaviour
             chosenIndex++;
             Cumweight += items[chosenIndex].weight;
         }
-        GameObject i = Instantiate(items[chosenIndex].gameObject, transform.position, Quaternion.identity) as GameObject;
+        
+        if(isDrawer == true)
+        {
+            GameObject i = Instantiate(items[chosenIndex].gameObject, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            GameObject i = Instantiate(items[chosenIndex].gameObject, transform.position, Quaternion.identity);
+        }
     }
 }

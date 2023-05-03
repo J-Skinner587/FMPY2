@@ -31,6 +31,7 @@ public class leavescene : MonoBehaviour
         {
             Confirm.SetActive(true);
             GameUI.SetActive(false);
+            camscript.enabled = false;
 // pause
         } 
     }
@@ -38,7 +39,7 @@ public class leavescene : MonoBehaviour
     // what medal the player got
     void Confirmed()
     {
-        // swap to menu scene + bring up end screen
+        //bring up end screen
 
         if (bronze <= CountdownTimer.Total)
         {
