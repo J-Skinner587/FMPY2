@@ -7,6 +7,6 @@ public class Failure : MonoBehaviour
 
     private void Update()
     {
-
+        
     }
 }

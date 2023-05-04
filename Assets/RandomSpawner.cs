@@ -44,10 +44,12 @@ public class RandomSpawner : MonoBehaviour
         if(isDrawer == true)
         {
             GameObject i = Instantiate(items[chosenIndex].gameObject, transform.position, Quaternion.identity);
+            i.isStatic = true;
         }
         else
         {
             GameObject i = Instantiate(items[chosenIndex].gameObject, transform.position, Quaternion.identity);
         }
+        
     }
 }

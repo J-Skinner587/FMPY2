@@ -16,6 +16,15 @@ public class leavescene : MonoBehaviour
     int silver = 2500;
     int gold = 5000;
     int platinum = 10000;
+
+    public static bool pass;
+    public static bool bronse;
+    public static bool silv;
+    public static bool golds;
+    public static bool plat;
+
+    public static bool fail;
+
     private void Start()
     {
         Confirm.SetActive(false); 
@@ -37,13 +46,13 @@ public class leavescene : MonoBehaviour
     }
 
     // what medal the player got
-    void Confirmed()
+    public void Confirmed()
     {
         //bring up end screen
 
         if (bronze <= CountdownTimer.Total)
         {
-            Debug.Log("No Medal Awarded");
+            
         }
 
         if(silver <= CountdownTimer.Total)
