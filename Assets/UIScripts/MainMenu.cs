@@ -6,24 +6,33 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
     public GameObject mainmenu;
     public GameObject options;
     public GameObject Controls;
+    public GameObject Levels;
+
+    public GameObject lvl1;
+    public GameObject lvl2;
 
     private void Start()
     {
         options.SetActive(false);
+        lvl1.SetActive(false);
+        Levels.SetActive(false);
         Controls.SetActive(false);
         mainmenu.SetActive(true);
+        lvl2.SetActive(false);
     }
     public void Quit()
     {
-        
+        Application.Quit();
     }
 
-    public void Play()
+    public void LevelsScreen()
     {
-        
+        Levels.SetActive(true);
+        mainmenu.SetActive(false);
     }
     public void ControlsMenu()
     {
@@ -37,10 +46,31 @@ public class MainMenu : MonoBehaviour
         options.SetActive(true);
     }
 
-    public void Back()
+    public void BackToMain()
     {
         options.SetActive(false);
         Controls.SetActive(false);
+        Levels.SetActive(false);
         mainmenu.SetActive(true);
+    }
+
+    public void LVL1()
+    {
+        lvl1.SetActive(true);
+        Levels.SetActive(false);
+        StartCoroutine("TypeWriterTMP");
+    }
+
+    public void LVL2()
+    {
+        lvl2.SetActive(true);
+        Levels.SetActive(false);
+        StartCoroutine("TypeWriterTMP");
+    }
+
+    public void BackToLevel()
+    {
+        lvl1.SetActive(false);
+        Levels.SetActive(true);
     }
 }

@@ -52,3 +52,4 @@ public class MainMenuSpawner : MonoBehaviour
         i.AddComponent<Rigidbody>();
     }
 }
+

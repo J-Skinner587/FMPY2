@@ -2,11 +2,14 @@ using JetBrains.Annotations;
 using SojaExiles;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class leavescene : MonoBehaviour
 {
+    public TextMeshProUGUI titletext;
+    public TextMeshProUGUI descriptiontext;
     public GameObject Confirm;
     public GameObject EndScreen;
     public GameObject GameUI;
@@ -17,14 +20,6 @@ public class leavescene : MonoBehaviour
     int gold = 5000;
     int platinum = 10000;
 
-    public static bool pass;
-    public static bool bronse;
-    public static bool silv;
-    public static bool golds;
-    public static bool plat;
-
-    public static bool fail;
-
     private void Start()
     {
         Confirm.SetActive(false); 
@@ -34,14 +29,12 @@ public class leavescene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var camscript = Player.GetComponentInChildren<MouseLook>();
-
         if (other.tag == "Player")
         {
             Confirm.SetActive(true);
             GameUI.SetActive(false);
-            camscript.enabled = false;
-// pause
+            Cursor.lockState = CursorLockMode.None;
+            // pause
         } 
     }
 
@@ -50,27 +43,41 @@ public class leavescene : MonoBehaviour
     {
         //bring up end screen
 
-        if (bronze <= CountdownTimer.Total)
-        {
-            
-        }
+        GameUI.SetActive(false);
+        Confirm.SetActive(false);
 
-        if(silver <= CountdownTimer.Total)
+        if (bronze >= CountdownTimer.Total)
+        {
+            Debug.Log("Fail");
+            titletext.text = "Failure";
+            descriptiontext.text = "You failed to reach your goal of 1000";
+
+        }
+        if(silver >= CountdownTimer.Total && CountdownTimer.Total > bronze)
         {
             Debug.Log("Bronze Medal Awarded");
+            titletext.text = "Bronze";
+            descriptiontext.text = "You got $1000, but could use a bit more.";
         }
-
-        if(gold <= CountdownTimer.Total)
+        if(gold >= CountdownTimer.Total && CountdownTimer.Total > silver)
         {
             Debug.Log("Silver");
+            titletext.text = "Silver";
+            descriptiontext.text = "You got $2500, but could use a bit more.";
         }
-        if(platinum <= CountdownTimer.Total)
+        if(platinum >= CountdownTimer.Total && CountdownTimer.Total > gold)
         {
             Debug.Log("Gold");
+            titletext.text = "Gold";
+            descriptiontext.text = "You got $5000, but could use a bit more.";
+
         }
         if(CountdownTimer.Total > platinum)
         {
             Debug.Log("Platinum");
+            titletext.text = "Platinum";
+            descriptiontext.text = "You got $10000. We good for now. . .";
         }
+        EndScreen.SetActive(true);
     }
 }

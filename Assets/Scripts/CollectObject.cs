@@ -24,7 +24,6 @@ namespace Collect
         private GUIStyle guiStyle;
         private string msg;
 
-
         void Start()
         {
             Player = GameObject.FindGameObjectWithTag("Player");
