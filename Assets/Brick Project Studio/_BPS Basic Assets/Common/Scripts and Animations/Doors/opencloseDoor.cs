@@ -10,8 +10,6 @@ public class opencloseDoor : MonoBehaviour
     public GameObject Player;
     public bool locked;
 
-    public GameObject FloatingTextPrefab;
-
     void Start()
     {
         Player = GameObject.FindWithTag("Player");

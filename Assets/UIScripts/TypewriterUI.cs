@@ -44,7 +44,7 @@ public class TypewriterUI : MonoBehaviour
             }
 		}
 		else
-			_tmpProText.text = "";
+			_tmpProText.text = writer;
 	}
 
 	 IEnumerator TypeWriterTMP()

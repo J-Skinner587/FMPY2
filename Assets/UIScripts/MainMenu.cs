@@ -58,18 +58,19 @@ public class MainMenu : MonoBehaviour
     {
         lvl1.SetActive(true);
         Levels.SetActive(false);
-        StartCoroutine("TypeWriterTMP");
+        TypewriterUI.active = true;
     }
 
     public void LVL2()
     {
         lvl2.SetActive(true);
         Levels.SetActive(false);
-        StartCoroutine("TypeWriterTMP");
+        TypewriterUI.active = true;
     }
 
     public void BackToLevel()
     {
+        lvl2.SetActive(false);
         lvl1.SetActive(false);
         Levels.SetActive(true);
     }
