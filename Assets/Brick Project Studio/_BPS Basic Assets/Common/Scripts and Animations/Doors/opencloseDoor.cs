@@ -9,11 +9,16 @@ public class opencloseDoor : MonoBehaviour
     public bool open;
     public GameObject Player;
     public bool locked;
+    public bool lockpick;
+    public GameObject LockCam;
 
+    Rigidbody m_Rigidbody;
     void Start()
     {
         Player = GameObject.FindWithTag("Player");
+        m_Rigidbody = Player.GetComponent<Rigidbody>();
         open = false;
+        LockCam.SetActive(false);
     }
     void OnMouseOver()
     {
@@ -30,6 +35,11 @@ public class opencloseDoor : MonoBehaviour
                             if (locked == false)
                             {
                                 StartCoroutine(opening());
+                            }
+                            if(lockpick == true)
+                            {
+                                LockCam.SetActive(true);
+                                m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                             }
                             else
                             {
