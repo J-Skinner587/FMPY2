@@ -5,8 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - openandclose: {instanceID: 0}
-  - Player: {instanceID: 0}
-  - FloatingTextPrefab: {fileID: 7585157467344016892, guid: 547ca76c74bcf164e92a81eeb8482719, type: 3}
+  - player: {instanceID: 0}
+  - LockCam: {fileID: 408902309881761542, guid: 74be37ca94fc09248a541b6415ac6652, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

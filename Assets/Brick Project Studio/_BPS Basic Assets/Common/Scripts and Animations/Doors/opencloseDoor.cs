@@ -6,11 +6,13 @@ public class opencloseDoor : MonoBehaviour
 {
     [SerializeField]
     public Animator openandclose;
-    public static bool open;
+    public bool open;
     public GameObject player;
     public bool locked;
     public bool lockpick;
     public GameObject LockCam;
+
+    LockPick Lockgame;
 
     Rigidbody m_rigidbody;
     void Start()
@@ -45,6 +47,10 @@ public class opencloseDoor : MonoBehaviour
                             {
                                 Cursor.lockState = CursorLockMode.None;
                                 LockCam.SetActive(true);
+                                Debug.Log("Minigame started");
+                                StartCoroutine(Opening());
+                                lockpick = false;
+                                locked = false;
                             }
                             else
                             {

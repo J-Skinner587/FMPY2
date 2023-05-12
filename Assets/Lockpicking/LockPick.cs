@@ -9,7 +9,9 @@ public class LockPick : MonoBehaviour
     public Transform innerLock;
     public Transform pickPosition;
 
-    GameObject player;
+    opencloseDoor door;
+
+    public GameObject player;
 
     public float maxAngle = 90;
     public float lockSpeed = 10;
@@ -25,8 +27,7 @@ public class LockPick : MonoBehaviour
 
     private bool movePick = true;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         newLock();
     }
@@ -55,12 +56,15 @@ public class LockPick : MonoBehaviour
         {
             movePick = false;
             keyPressTime = 1;
+            
+            //if cam is active do this
+            player.GetComponent<CharacterController>().enabled = false;
         }
         if(Input.GetKeyUp(KeyCode.D))
         {
             movePick = true;
             keyPressTime = 0;
-            Player.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+
         }
 
         float percentage = Mathf.Round(100 - Mathf.Abs(((eulerAngle - unlockAngle) / 100) * 100));
@@ -76,12 +80,10 @@ public class LockPick : MonoBehaviour
             {
                 Debug.Log("Unlocked!");
                 lockCam.SetActive(false);
-
-                newLock();
-
                 movePick = true;
                 keyPressTime = 0;
                 Cursor.lockState = CursorLockMode.Locked;
+                player.GetComponent<CharacterController>().enabled = true;
             }
             if(keyPressTime == 1)
             {
@@ -92,8 +94,9 @@ public class LockPick : MonoBehaviour
         }
     }
 
-    void newLock()
+    public void newLock()
     {
+        Debug.Log("new lock made!");
         unlockAngle = Random.Range(-maxAngle + lockRange, maxAngle - lockRange);
         unlockRange = new Vector2(unlockAngle - lockRange, unlockAngle + lockRange);
     }
