@@ -28,7 +28,6 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-
     public void LevelsScreen()
     {
         Levels.SetActive(true);
@@ -39,13 +38,11 @@ public class MainMenu : MonoBehaviour
         mainmenu.SetActive(false);
         Controls.SetActive(true);
     }
-
     public void OptionsMenu()
     {
         mainmenu.SetActive(false);
         options.SetActive(true);
     }
-
     public void BackToMain()
     {
         options.SetActive(false);
@@ -53,25 +50,31 @@ public class MainMenu : MonoBehaviour
         Levels.SetActive(false);
         mainmenu.SetActive(true);
     }
-
     public void LVL1()
     {
         lvl1.SetActive(true);
         Levels.SetActive(false);
         TypewriterUI.active = true;
     }
-
     public void LVL2()
     {
         lvl2.SetActive(true);
         Levels.SetActive(false);
         TypewriterUI.active = true;
     }
-
     public void BackToLevel()
     {
         lvl2.SetActive(false);
         lvl1.SetActive(false);
         Levels.SetActive(true);
+    }
+    public void Play1()
+    {
+        Debug.Log("Player lvl1");
+        SceneManager.LoadScene(1);
+    }
+    public void Play2()
+    {
+        SceneManager.LoadScene(2);
     }
 }

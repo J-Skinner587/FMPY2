@@ -81,6 +81,7 @@ public class LockPick : MonoBehaviour
 
                 movePick = true;
                 keyPressTime = 0;
+                Cursor.lockState = CursorLockMode.Locked;
             }
             if(keyPressTime == 1)
             {

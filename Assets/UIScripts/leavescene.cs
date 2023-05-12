@@ -42,42 +42,44 @@ public class leavescene : MonoBehaviour
     public void Confirmed()
     {
         //bring up end screen
-
+        
+        Cursor.lockState = CursorLockMode.None;
         GameUI.SetActive(false);
         Confirm.SetActive(false);
 
-        if (bronze >= CountdownTimer.Total)
+        if (bronze >= CountdownStart.Total)
         {
             Debug.Log("Fail");
             titletext.text = "Failure";
             descriptiontext.text = "You failed to reach your goal of 1000";
 
         }
-        if(silver >= CountdownTimer.Total && CountdownTimer.Total > bronze)
+        if(silver >= CountdownStart.Total && CountdownStart.Total > bronze)
         {
             Debug.Log("Bronze Medal Awarded");
             titletext.text = "Bronze";
             descriptiontext.text = "You got $1000, but could use a bit more.";
         }
-        if(gold >= CountdownTimer.Total && CountdownTimer.Total > silver)
+        if(gold >= CountdownStart.Total && CountdownStart.Total > silver)
         {
             Debug.Log("Silver");
             titletext.text = "Silver";
             descriptiontext.text = "You got $2500, but could use a bit more.";
         }
-        if(platinum >= CountdownTimer.Total && CountdownTimer.Total > gold)
+        if(platinum >= CountdownStart.Total && CountdownStart.Total > gold)
         {
             Debug.Log("Gold");
             titletext.text = "Gold";
             descriptiontext.text = "You got $5000, but could use a bit more.";
 
         }
-        if(CountdownTimer.Total > platinum)
+        if(CountdownStart.Total > platinum)
         {
             Debug.Log("Platinum");
             titletext.text = "Platinum";
             descriptiontext.text = "You got $10000. We good for now. . .";
         }
         EndScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
 }

@@ -55,7 +55,7 @@ namespace Collect
             collected = true;
             yield return new WaitForSeconds(.5f);
             Object.SetActive(false);
-            CountdownTimer.Total += Value;
+            CountdownStart.Total += Value;
         }
     }
 }

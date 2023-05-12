@@ -43,6 +43,7 @@ public class opencloseDoor : MonoBehaviour
                             }
                             if(lockpick == true)
                             {
+                                Cursor.lockState = CursorLockMode.None;
                                 LockCam.SetActive(true);
                             }
                             else
