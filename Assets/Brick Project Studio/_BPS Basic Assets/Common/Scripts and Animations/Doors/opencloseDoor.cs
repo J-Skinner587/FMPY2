@@ -6,26 +6,31 @@ public class opencloseDoor : MonoBehaviour
 {
     [SerializeField]
     public Animator openandclose;
-    public bool open;
-    public GameObject Player;
+    public static bool open;
+    public GameObject player;
     public bool locked;
     public bool lockpick;
     public GameObject LockCam;
 
-    Rigidbody m_Rigidbody;
+    Rigidbody m_rigidbody;
     void Start()
     {
-        Player = GameObject.FindWithTag("Player");
-        m_Rigidbody = Player.GetComponent<Rigidbody>();
+        player = GameObject.FindWithTag("Player");
+        if(lockpick == true)
+        {
+            LockCam = GameObject.FindWithTag("LockCam");
+            LockCam.SetActive(false);
+        }
+        m_rigidbody = player.GetComponent<Rigidbody>();
+      
         open = false;
-        LockCam.SetActive(false);
     }
     void OnMouseOver()
     {
         {
-            if (Player)
+            if (player)
             {
-                float dist = Vector3.Distance(Player.transform.position, transform.position);
+                float dist = Vector3.Distance(player.transform.position, transform.position);
                 if (dist < 15)
                 {
                     if (open == false)
@@ -34,12 +39,11 @@ public class opencloseDoor : MonoBehaviour
                         {
                             if (locked == false)
                             {
-                                StartCoroutine(opening());
+                                StartCoroutine(Opening());
                             }
                             if(lockpick == true)
                             {
                                 LockCam.SetActive(true);
-                                m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                             }
                             else
                             {
@@ -54,7 +58,7 @@ public class opencloseDoor : MonoBehaviour
                         {
                             if (Input.GetMouseButtonDown(0))
                             {
-                                StartCoroutine(closing());
+                                StartCoroutine(Closing());
                             }
                         }
 
@@ -66,14 +70,14 @@ public class opencloseDoor : MonoBehaviour
         }
 
     }
-    IEnumerator opening()
+    public IEnumerator Opening()
     {
         print("you are opening the door");
         openandclose.Play("Opening");
         open = true;
         yield return new WaitForSeconds(.5f);
     }
-    IEnumerator closing()
+    IEnumerator Closing()
     {
         print("you are closing the door");
         openandclose.Play("Closing");

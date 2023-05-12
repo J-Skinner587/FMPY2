@@ -5,8 +5,11 @@ using UnityEngine;
 public class LockPick : MonoBehaviour
 {
     public Camera cam;
+    public GameObject lockCam;
     public Transform innerLock;
     public Transform pickPosition;
+
+    GameObject player;
 
     public float maxAngle = 90;
     public float lockSpeed = 10;
@@ -57,6 +60,7 @@ public class LockPick : MonoBehaviour
         {
             movePick = true;
             keyPressTime = 0;
+            Player.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
         }
 
         float percentage = Mathf.Round(100 - Mathf.Abs(((eulerAngle - unlockAngle) / 100) * 100));
@@ -71,7 +75,7 @@ public class LockPick : MonoBehaviour
             if (eulerAngle < unlockRange.y && eulerAngle > unlockRange.x)
             {
                 Debug.Log("Unlocked!");
-                
+                lockCam.SetActive(false);
 
                 newLock();
 
