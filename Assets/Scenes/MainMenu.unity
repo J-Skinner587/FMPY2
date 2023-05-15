@@ -2022,7 +2022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDrawer: 0
-  spawnTime: 0.5
+  spawnTime: 0.65
   items:
   - gameObject: {fileID: 29526655912609118, guid: 2d6f3b929468cea46a733cd9fe79f4c9, type: 3}
     weight: 0.1
