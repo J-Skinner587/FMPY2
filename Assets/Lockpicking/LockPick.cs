@@ -29,6 +29,7 @@ public class LockPick : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindWithTag("Player");
         newLock();
     }
 
@@ -57,14 +58,20 @@ public class LockPick : MonoBehaviour
             movePick = false;
             keyPressTime = 1;
             
-            //if cam is active do this
-            player.GetComponent<CharacterController>().enabled = false;
+            if(lockCam.activeInHierarchy)
+            {
+                player.GetComponent<CharacterController>().enabled = false;
+            }
         }
         if(Input.GetKeyUp(KeyCode.D))
         {
             movePick = true;
             keyPressTime = 0;
-
+          
+            if (lockCam.activeInHierarchy)
+            {
+                player.GetComponent<CharacterController>().enabled = false;
+            }
         }
 
         float percentage = Mathf.Round(100 - Mathf.Abs(((eulerAngle - unlockAngle) / 100) * 100));
@@ -84,6 +91,8 @@ public class LockPick : MonoBehaviour
                 keyPressTime = 0;
                 Cursor.lockState = CursorLockMode.Locked;
                 player.GetComponent<CharacterController>().enabled = true;
+
+                newLock();
             }
             if(keyPressTime == 1)
             {

@@ -12,70 +12,62 @@ public class opencloseDoor : MonoBehaviour
     public bool lockpick;
     public GameObject LockCam;
 
-    LockPick Lockgame;
-
-    Rigidbody m_rigidbody;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        if(lockpick == true)
+        if (lockpick == true)
         {
             LockCam = GameObject.FindWithTag("LockCam");
             LockCam.SetActive(false);
         }
-        m_rigidbody = player.GetComponent<Rigidbody>();
-      
+
         open = false;
     }
     void OnMouseOver()
     {
+        if (player)
         {
-            if (player)
+            float dist = Vector3.Distance(player.transform.position, transform.position);
+            if (dist < 15)
             {
-                float dist = Vector3.Distance(player.transform.position, transform.position);
-                if (dist < 15)
+                if (open == false)
                 {
-                    if (open == false)
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        if (locked == false)
+                        {
+                            StartCoroutine(Opening());
+                        }
+                        if (lockpick == true)
+                        {
+                            Cursor.lockState = CursorLockMode.None;
+                            LockCam.SetActive(true);
+                            Debug.Log("Minigame started");
+                            StartCoroutine(Opening());
+                            lockpick = false;
+                            locked = false;
+                        }
+                        else
+                        {
+                            TypewriterUI.active = true;
+                            Debug.Log("LockedDoor");
+                        }
+                    }
+                }
+                else
+                {
+                    if (open == true)
                     {
                         if (Input.GetMouseButtonDown(0))
                         {
-                            if (locked == false)
-                            {
-                                StartCoroutine(Opening());
-                            }
-                            if(lockpick == true)
-                            {
-                                Cursor.lockState = CursorLockMode.None;
-                                LockCam.SetActive(true);
-                                Debug.Log("Minigame started");
-                                StartCoroutine(Opening());
-                                lockpick = false;
-                                locked = false;
-                            }
-                            else
-                            {
-                                TypewriterUI.active = true;
-                                Debug.Log("LockedDoor");
-                            }
+                            StartCoroutine(Closing());
                         }
-                    }
-                    else
-                    {
-                        if (open == true)
-                        {
-                            if (Input.GetMouseButtonDown(0))
-                            {
-                                StartCoroutine(Closing());
-                            }
-                        }
-
                     }
 
                 }
+
             }
-
         }
-
     }
     public IEnumerator Opening()
     {
