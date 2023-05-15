@@ -31,8 +31,8 @@ public class leavescene : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Confirm.SetActive(true);
             GameUI.SetActive(false);
+            Confirm.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             // pause
         } 

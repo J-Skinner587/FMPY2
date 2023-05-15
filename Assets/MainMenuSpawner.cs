@@ -50,6 +50,8 @@ public class MainMenuSpawner : MonoBehaviour
 
         GameObject i = Instantiate(items[chosenIndex].gameObject, transform.position, Quaternion.identity);
         i.AddComponent<Rigidbody>();
+
+        //add frenzy items falling when selected
     }
 }
 

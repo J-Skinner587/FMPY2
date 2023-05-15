@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static System.Net.Mime.MediaTypeNames;
+using UnityEngine.SceneManagement;
 
 namespace Collect
 {
@@ -19,11 +20,26 @@ namespace Collect
         GameObject Player;
         public GameObject Object;
         public int Value;
+        public bool furniture;
+        public bool Frenzy;
         void Start()
         {
-            Player = GameObject.FindGameObjectWithTag("Player");
-            collected = false;
-            Object.SetActive(true);
+            if(furniture == !true)
+            {
+                Player = GameObject.FindGameObjectWithTag("Player");
+                collected = false;
+                Object.SetActive(true);
+            }
+            if(Frenzy == true)
+            {
+                Player = GameObject.FindGameObjectWithTag("Player");
+                collected = false;
+                Object.SetActive(true);
+            }
+            else
+            {
+                enabled = false;
+            }
         }
         void OnMouseOver()
         {
