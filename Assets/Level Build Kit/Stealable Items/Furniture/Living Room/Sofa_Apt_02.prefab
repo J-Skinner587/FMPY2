@@ -114,7 +114,7 @@ MonoBehaviour:
   collected: 0
   Object: {fileID: 5781420221921499261}
   Value: 250
-  furniture: 0
+  furniture: 1
   Frenzy: 0
 --- !u!1 &8533295252653469338
 GameObject:

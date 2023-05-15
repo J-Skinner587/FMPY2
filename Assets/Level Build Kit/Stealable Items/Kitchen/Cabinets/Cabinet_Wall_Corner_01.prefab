@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0077bd3bf8b10d1449c400058c6239a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDrawer: 0
   items:
   - gameObject: {fileID: 3451982701686888311, guid: 8b726a9375ea2e442aa068972abf0c08, type: 3}
     weight: 0.05
@@ -365,9 +366,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 2116746181}
   open: 0
-  Player: {fileID: 0}
+  player: {fileID: 0}
   locked: 0
-  FloatingTextPrefab: {fileID: 0}
+  lockpick: 0
+  LockCam: {fileID: 0}
 --- !u!1 &3645696822098084759
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0077bd3bf8b10d1449c400058c6239a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDrawer: 0
   items:
   - gameObject: {fileID: 3451982701686888311, guid: 8b726a9375ea2e442aa068972abf0c08, type: 3}
     weight: 0.05
@@ -821,9 +824,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1034749826}
   open: 0
-  Player: {fileID: 0}
+  player: {fileID: 0}
   locked: 0
-  FloatingTextPrefab: {fileID: 0}
+  lockpick: 0
+  LockCam: {fileID: 0}
 --- !u!1 &8286077048136229997
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +840,7 @@ GameObject:
   - component: {fileID: 7977829042647964534}
   - component: {fileID: 751402469560137725}
   - component: {fileID: 4579037469988632223}
+  - component: {fileID: -7996098881609793533}
   m_Layer: 0
   m_Name: Cabinet_Wall_Corner_01
   m_TagString: Untagged
@@ -932,6 +937,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6153887777808292893, guid: 2a83511a782a6aa4dafed1f5a2bd3803, type: 3}
+--- !u!114 &-7996098881609793533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8286077048136229997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
+  Object: {fileID: 8286077048136229997}
+  Value: 100
+  furniture: 1
+  Frenzy: 0
 --- !u!1001 &124612883759540621
 PrefabInstance:
   m_ObjectHideFlags: 0

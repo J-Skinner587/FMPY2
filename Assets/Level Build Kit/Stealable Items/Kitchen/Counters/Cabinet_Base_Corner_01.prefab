@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0077bd3bf8b10d1449c400058c6239a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDrawer: 0
   items:
   - gameObject: {fileID: 3451982701686888311, guid: 8b726a9375ea2e442aa068972abf0c08, type: 3}
     weight: 0.05
@@ -111,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0077bd3bf8b10d1449c400058c6239a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDrawer: 0
   items:
   - gameObject: {fileID: 3451982701686888311, guid: 8b726a9375ea2e442aa068972abf0c08, type: 3}
     weight: 0.05
@@ -494,6 +496,7 @@ GameObject:
   - component: {fileID: 3785760876756273057}
   - component: {fileID: 1913021417504215489}
   - component: {fileID: 6447363312054082602}
+  - component: {fileID: 4931892452705585172}
   m_Layer: 0
   m_Name: Cabinet_Base_Corner_01
   m_TagString: Untagged
@@ -584,6 +587,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 281854930238610966, guid: 2a83511a782a6aa4dafed1f5a2bd3803, type: 3}
+--- !u!114 &4931892452705585172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546436795134103488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
+  Object: {fileID: 5546436795134103488}
+  Value: 100
+  furniture: 1
+  Frenzy: 0
 --- !u!1 &8229163075646008426
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 745671374}
   open: 0
-  Player: {fileID: 0}
+  player: {fileID: 0}
   locked: 0
-  FloatingTextPrefab: {fileID: 0}
+  lockpick: 0
+  LockCam: {fileID: 0}

@@ -931,6 +931,7 @@ GameObject:
   - component: {fileID: 3237601505444334696}
   - component: {fileID: 5292986115831016892}
   - component: {fileID: 9185818289304450371}
+  - component: {fileID: 7813664392233875447}
   m_Layer: 0
   m_Name: Dresser Closet_01
   m_TagString: Untagged
@@ -1033,6 +1034,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1604373, y: 3.6130936, z: 0.033844296}
   m_Center: {x: -0.00000011920964, y: 1.8065468, z: -0.9789949}
+--- !u!114 &7813664392233875447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851711041489694631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
+  Object: {fileID: 7851711041489694631}
+  Value: 200
+  furniture: 1
+  Frenzy: 0
 --- !u!1 &8136989500009327838
 GameObject:
   m_ObjectHideFlags: 0

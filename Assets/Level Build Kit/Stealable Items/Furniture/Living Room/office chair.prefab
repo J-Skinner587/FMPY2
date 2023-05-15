@@ -676,6 +676,7 @@ GameObject:
   - component: {fileID: 1494970931388637534}
   - component: {fileID: 1484581674770594464}
   - component: {fileID: 1454170235590415154}
+  - component: {fileID: 2757283379399734971}
   m_Layer: 0
   m_Name: office chair
   m_TagString: Untagged
@@ -769,3 +770,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.815737, y: 1.6488075, z: 0.69197845}
   m_Center: {x: 0.008294702, y: 0.927524, z: -0.009288847}
+--- !u!114 &2757283379399734971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499471576907991684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
+  Object: {fileID: 1499471576907991684}
+  Value: 100
+  furniture: 1
+  Frenzy: 0
