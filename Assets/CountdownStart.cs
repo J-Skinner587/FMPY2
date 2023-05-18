@@ -21,6 +21,8 @@ public class CountdownStart : MonoBehaviour
 
     public GameObject mainUI;
 
+    public GameObject holder;
+
     private void Start()
     {
         currentTime = startingTime;
@@ -32,23 +34,27 @@ public class CountdownStart : MonoBehaviour
     {
         timeLeft -= Time.deltaTime;
         startText.text = (timeLeft).ToString("0");
-        if(timeLeft < 0)
+        if(timeLeft < 0.5)
         {
-            mainUI.SetActive(true);
-            counterui.SetActive(false);
-
-            currentTime -= 1 * Time.deltaTime;
-            timerText.text = currentTime.ToString("0");
-
-            if (currentTime <= 0)
+            startText.text = "GO!!!";
+            if(timeLeft < 0)
             {
-                currentTime = 0;
-                timerText.text = "Time's Up";
-                Debug.Log("$$ Time Up $$");
-            }
+                mainUI.SetActive(true);
+                counterui.SetActive(false);
 
-            MoneyText = Total;
-            MoneyCounter.text = ("Take: $") + MoneyText.ToString();
+                currentTime -= 1 * Time.deltaTime;
+                timerText.text = currentTime.ToString("0");
+
+                if (currentTime <= 0)
+                {
+                    currentTime = 0;
+                    timerText.text = "Time's Up";
+                    Debug.Log("$$ Time Up $$");
+                }
+
+                MoneyText = Total;
+                MoneyCounter.text = ("Take: $") + MoneyText.ToString();
+            }
         }
     }
 }

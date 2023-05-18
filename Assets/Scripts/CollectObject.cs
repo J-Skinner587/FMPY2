@@ -21,16 +21,20 @@ namespace Collect
         public GameObject Object;
         public int Value;
         public bool furniture;
-        public bool Frenzy;
+        public MainMenu menu;
+        public int TotCollected;
+
+        public bool frenzy;
         void Start()
         {
+            TotCollected = 0;
             if(furniture == !true)
             {
                 Player = GameObject.FindGameObjectWithTag("Player");
                 collected = false;
                 Object.SetActive(true);
             }
-            if(Frenzy == true)
+            if(frenzy)
             {
                 Player = GameObject.FindGameObjectWithTag("Player");
                 collected = false;
@@ -72,6 +76,7 @@ namespace Collect
             yield return new WaitForSeconds(.5f);
             Object.SetActive(false);
             CountdownStart.Total += Value;
+            TotCollected++;
         }
     }
 }

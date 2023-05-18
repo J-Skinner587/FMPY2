@@ -9,8 +9,6 @@ public class LockPick : MonoBehaviour
     public Transform innerLock;
     public Transform pickPosition;
 
-    opencloseDoor door;
-
     public GameObject player;
 
     public float maxAngle = 90;

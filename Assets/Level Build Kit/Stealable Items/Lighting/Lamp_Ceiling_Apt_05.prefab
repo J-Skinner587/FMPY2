@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4476616957499719488}
   - component: {fileID: 855667888959303457}
   - component: {fileID: 2023304251560112209}
+  - component: {fileID: 4299696728815625328}
   m_Layer: 0
   m_Name: Lamp_Ceiling_Apt_05
   m_TagString: Untagged
@@ -85,6 +86,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4299696728815625328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2596148168777197119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
+  Object: {fileID: 2596148168777197119}
+  Value: 100
+  furniture: 1
+  Frenzy: 0
 --- !u!1 &5066921363743662033
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,6 @@ public class opencloseDoor : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         if (lockpick == true)
         {
-            LockCam = GameObject.FindWithTag("LockCam");
             LockCam.SetActive(false);
         }
 

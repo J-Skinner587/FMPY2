@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 2890714906463251203}
   - component: {fileID: 7848749749559260537}
   - component: {fileID: 8966614365605793901}
+  - component: {fileID: -6192285833759942160}
   m_Layer: 0
   m_Name: Lamp_Ceiling_Apt_04
   m_TagString: Untagged
@@ -362,6 +363,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5513817, y: 0.420384, z: 0.55138177}
   m_Center: {x: -0.00000017881393, y: -0.21019194, z: -0.00000011920929}
+--- !u!114 &-6192285833759942160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4741806517751454857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
+  Object: {fileID: 4741806517751454857}
+  Value: 100
+  furniture: 1
+  Frenzy: 0
 --- !u!1 &5798392848707464890
 GameObject:
   m_ObjectHideFlags: 0

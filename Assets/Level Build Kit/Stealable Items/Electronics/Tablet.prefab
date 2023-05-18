@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33108869697643918}
   - component: {fileID: 23191520334749994}
   - component: {fileID: 65668122333127614}
-  - component: {fileID: 470720940894265714}
+  - component: {fileID: -105965576612036257}
   m_Layer: 0
   m_Name: Tablet
   m_TagString: Untagged
@@ -27,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817072745897592}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.70710677, y: 0, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33108869697643918
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16803499, y: 0.235249, z: 0.01075424}
   m_Center: {x: 0, y: 0.14786498, z: 0}
---- !u!114 &470720940894265714
+--- !u!114 &-105965576612036257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,3 +113,5 @@ MonoBehaviour:
   collected: 0
   Object: {fileID: 1817072745897592}
   Value: 300
+  furniture: 0
+  Frenzy: 0

@@ -301,6 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 7296751938604968510}
   open: 0
-  Player: {fileID: 0}
+  player: {fileID: 0}
   locked: 0
-  FloatingTextPrefab: {fileID: 7585157467344016892, guid: 547ca76c74bcf164e92a81eeb8482719, type: 3}
+  lockpick: 0
+  LockCam: {fileID: 408902309881761542, guid: 74be37ca94fc09248a541b6415ac6652, type: 3}

@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 8523506699456347690}
   - component: {fileID: 5468392213182941503}
   - component: {fileID: 6843512959895892859}
+  - component: {fileID: 1137884934676807196}
   m_Layer: 0
   m_Name: Lamp_Floor_Apt_01
   m_TagString: Untagged
@@ -276,3 +277,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.44478983, y: 1.7029282, z: 0.4447899}
   m_Center: {x: -0.000000014901161, y: 0.8514641, z: -0.000000037252903}
+--- !u!114 &1137884934676807196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170374348065476132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
+  Object: {fileID: 7170374348065476132}
+  Value: 75
+  furniture: 1
+  Frenzy: 0

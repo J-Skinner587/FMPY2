@@ -1,6 +1,8 @@
+using Collect;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,8 +18,6 @@ public class MainMenu : MonoBehaviour
     public GameObject lvl2;
 
     public GameObject frenzy;
-
-    Collect.CollectObject collect;
 
     private void Start()
     {
@@ -73,6 +73,13 @@ public class MainMenu : MonoBehaviour
         lvl1.SetActive(false);
         Levels.SetActive(true);
     }
+    public void PlayFrenzy()
+    {
+
+        Debug.Log("Player lvl1");
+        SceneManager.LoadScene(1);
+        
+    }
     public void Play1()
     {
         Debug.Log("Player lvl1");
@@ -82,11 +89,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
-    public void Frenzy()
+    public void Frenz()
     {
-        collect.Frenzy = true;
         Levels.SetActive(false);
         frenzy.SetActive(true);
-        
     }
 }
