@@ -15,6 +15,7 @@ TagManager:
   - Counter
   - LockCam
   - Holder
+  - Frenzy
   layers:
   - Default
   - TransparentFX

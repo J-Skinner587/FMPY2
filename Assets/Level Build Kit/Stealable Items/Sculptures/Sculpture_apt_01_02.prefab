@@ -112,8 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 4819301098079367790}
   Value: 100
+  furniture: 0
+  TotCollected: 0
+  Manager: {fileID: 1184586146470815364, guid: f9243847d22726d49a7fb06798f2611f, type: 3}
+  frenzy: 0
 --- !u!1 &4819301098622685220
 GameObject:
   m_ObjectHideFlags: 0

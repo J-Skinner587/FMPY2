@@ -956,7 +956,7 @@ Transform:
   - {fileID: 4197659242072857505}
   - {fileID: 6882688055132391493}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5577525277476491866
 MeshFilter:
@@ -1047,10 +1047,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 7851711041489694631}
   Value: 200
   furniture: 1
-  Frenzy: 0
+  TotCollected: 0
+  Manager: {fileID: 0}
+  Spawner: {fileID: 0}
+  frenzy: 0
 --- !u!1 &8136989500009327838
 GameObject:
   m_ObjectHideFlags: 0

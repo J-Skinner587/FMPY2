@@ -11,72 +11,87 @@ using UnityEngine.UIElements;
 using static System.Net.Mime.MediaTypeNames;
 using UnityEngine.SceneManagement;
 
-namespace Collect
+public class CollectObject : MonoBehaviour
 {
-    public class CollectObject : MonoBehaviour
+    [SerializeField]
+    public bool collected;
+    GameObject Player;
+    GameObject Object;
+    public int Value;
+    public bool furniture;
+    public int TotCollected;
+
+    public GameObject Manager;
+
+    public GameObject Spawner;
+
+    public bool frenzy;
+    void Start()
     {
-        [SerializeField]
-        public bool collected;
-        GameObject Player;
-        public GameObject Object;
-        public int Value;
-        public bool furniture;
-        public MainMenu menu;
-        public int TotCollected;
 
-        public bool frenzy;
-        void Start()
+        if (Player != null)
         {
-            TotCollected = 0;
-            if(furniture == !true)
-            {
-                Player = GameObject.FindGameObjectWithTag("Player");
-                collected = false;
-                Object.SetActive(true);
-            }
-            if(frenzy)
-            {
-                Player = GameObject.FindGameObjectWithTag("Player");
-                collected = false;
-                Object.SetActive(true);
-            }
-            else
-            {
-                enabled = false;
-            }
-        }
-        void OnMouseOver()
-        {
-            {
-                if (Player)
-                {
-                    float dist = Vector3.Distance(Player.transform.position, transform.position);
-                    if (dist < 10)
-                    {
-                        if (collected == false)
-                        {
-                            if (Input.GetMouseButtonDown(0))
-                            {
-                                StartCoroutine(collect());
-                            }
-                        }
-                        else
-                            return;
-                    }
-                }
-
-            }
+            frenzy = GameObject.FindGameObjectWithTag("Frenzy").GetComponent<FrenzyManage>().frenzy;
 
         }
 
-        IEnumerator collect()
+        TotCollected = 0;
+
+        if (!furniture)
         {
-            Debug.Log("You Collected" + this.name);
-            collected = true;
-            yield return new WaitForSeconds(.5f);
-            Object.SetActive(false);
-            CountdownStart.Total += Value;
-            TotCollected++;
+            Player = GameObject.FindGameObjectWithTag("Player");
+            collected = false;
+            Object = this.gameObject;
+            Object.SetActive(true);
+        }
+        if (frenzy)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+            collected = false;
+            Object.SetActive(true);
+        }
+        else
+        {
+            enabled = false;
         }
     }
+    void OnMouseOver()
+    {
+        if (Player)
+        {
+            float dist = Vector3.Distance(Player.transform.position, transform.position);
+            if (dist < 10)
+            {
+                if (collected == false)
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        StartCoroutine(Collect());
+                    }
+                }
+                else
+                    return;
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (Spawner.activeSelf == false)
+        {
+            this.gameObject.AddComponent<Rigidbody>();
+        }
+
+    }
+
+    IEnumerator Collect()
+    {
+        Debug.Log("You Collected" + this.name);
+        collected = true;
+        yield return new WaitForSeconds(.5f);
+        Object.SetActive(false);
+        CountdownStart.Total += Value;
+        TotCollected++;
+    }
 }
+

@@ -28,6 +28,7 @@ public class CountdownStart : MonoBehaviour
         currentTime = startingTime;
         counterui.SetActive(true);
         mainUI.SetActive(false);
+
     }
 
     private void Update()
@@ -44,7 +45,6 @@ public class CountdownStart : MonoBehaviour
 
                 currentTime -= 1 * Time.deltaTime;
                 timerText.text = currentTime.ToString("0");
-
                 if (currentTime <= 0)
                 {
                     currentTime = 0;
