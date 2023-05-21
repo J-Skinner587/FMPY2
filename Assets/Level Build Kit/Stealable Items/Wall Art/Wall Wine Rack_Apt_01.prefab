@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 7490791141872355869}
   m_Layer: 0
   m_Name: Wall Wine Rack_Apt_01
-  m_TagString: Untagged
+  m_TagString: Artwork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,7 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui: {fileID: 0}
   collected: 0
-  Object: {fileID: 2874155572567143284}
   Value: 0
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3990101036297928249}
   m_Layer: 0
   m_Name: Sculpture_apt_02_02
-  m_TagString: Untagged
+  m_TagString: Artwork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,5 +114,4 @@ MonoBehaviour:
   Value: 75
   furniture: 0
   TotCollected: 0
-  Manager: {fileID: 1184586146470815364, guid: f9243847d22726d49a7fb06798f2611f, type: 3}
-  frenzy: 0
+  UI: {fileID: 0}

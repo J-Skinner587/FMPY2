@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: -6193435250311043088}
   m_Layer: 0
   m_Name: Coffee Machine
-  m_TagString: Untagged
+  m_TagString: Appliances
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,8 +198,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 2640015100330053026}
   Value: 100
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}
 --- !u!1 &3939678803046882080
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8029825009867057520}
   m_Layer: 0
   m_Name: Canvas_Painting_03
-  m_TagString: Untagged
+  m_TagString: Artwork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,5 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 1929367146843536}
   Value: 150
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}

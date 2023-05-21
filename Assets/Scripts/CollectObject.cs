@@ -19,35 +19,17 @@ public class CollectObject : MonoBehaviour
     GameObject Object;
     public int Value;
     public bool furniture;
-    public int TotCollected;
 
-    public GameObject Manager;
+    public GameObject UI;
 
-    public GameObject Spawner;
-
-    public bool frenzy;
     void Start()
     {
-
-        if (Player != null)
-        {
-            frenzy = GameObject.FindGameObjectWithTag("Frenzy").GetComponent<FrenzyManage>().frenzy;
-
-        }
-
-        TotCollected = 0;
-
+        leavescene.TotCollected = 0;
         if (!furniture)
         {
             Player = GameObject.FindGameObjectWithTag("Player");
             collected = false;
             Object = this.gameObject;
-            Object.SetActive(true);
-        }
-        if (frenzy)
-        {
-            Player = GameObject.FindGameObjectWithTag("Player");
-            collected = false;
             Object.SetActive(true);
         }
         else
@@ -74,24 +56,44 @@ public class CollectObject : MonoBehaviour
             }
         }
     }
-
-    private void Update()
-    {
-        if (Spawner.activeSelf == false)
-        {
-            this.gameObject.AddComponent<Rigidbody>();
-        }
-
-    }
-
     IEnumerator Collect()
     {
         Debug.Log("You Collected" + this.name);
         collected = true;
         yield return new WaitForSeconds(.5f);
-        Object.SetActive(false);
-        CountdownStart.Total += Value;
-        TotCollected++;
+        if(Object.CompareTag("Appliances"))
+        {
+            leavescene.TotalAppliances++;
+            CountdownStart.Total += Value;
+            Debug.Log("CollectAppli");
+            Object.SetActive(false);
+        }
+        if (Object.CompareTag("Artwork"))
+        {
+            leavescene.TotalArtwork++;
+            CountdownStart.Total += Value;
+            Debug.Log("CollectArt");
+            Object.SetActive(false);
+        }
+        if (Object.CompareTag("Electronics"))
+        {
+            leavescene.TotalElectronics++;
+            CountdownStart.Total += Value;
+            Debug.Log("CollectElectron");
+            Object.SetActive(false);
+        }
+        if (Object.CompareTag("Wine"))
+        {
+            leavescene.TotalWine++;
+            CountdownStart.Total += Value;
+            Debug.Log("Collectwine");
+            Object.SetActive(false);
+        }
+        else
+        {
+            CountdownStart.Total += Value;
+            Object.SetActive(false);
+        }
     }
 }
 

@@ -16,6 +16,11 @@ TagManager:
   - LockCam
   - Holder
   - Frenzy
+  - UIscript
+  - Appliances
+  - Artwork
+  - Electronics
+  - Wine
   layers:
   - Default
   - TransparentFX

@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 8352123075507482267}
   m_Layer: 0
   m_Name: Toaster
-  m_TagString: Untagged
+  m_TagString: Appliances
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,5 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 6145271163491723563}
   Value: 100
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}

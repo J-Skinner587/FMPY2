@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -105965576612036257}
   m_Layer: 0
   m_Name: Tablet
-  m_TagString: Untagged
+  m_TagString: Electronics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 1817072745897592}
   Value: 300
   furniture: 0
-  Frenzy: 0
+  TotCollected: 0
+  UI: {fileID: 0}

@@ -16,11 +16,6 @@ public class MainMenu : MonoBehaviour
     public GameObject lvl1;
     public GameObject lvl2;
 
-    public GameObject frenzy;
-
-    FrenzyManage frenman;
-    public bool Frenzy;
-
     private void Start()
     {
         options.SetActive(false);
@@ -29,7 +24,6 @@ public class MainMenu : MonoBehaviour
         Controls.SetActive(false);
         mainmenu.SetActive(true);
         lvl2.SetActive(false);
-        frenzy.SetActive(false);
     }
     public void Quit()
     {
@@ -83,10 +77,5 @@ public class MainMenu : MonoBehaviour
     public void Play2()
     {
         SceneManager.LoadScene(2);
-    }
-    public void FrenzyPlay()
-    {
-        SceneManager.LoadScene(3);
-        Debug.Log("Frenzy");
     }
 }

@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 5481712700946260605}
   m_Layer: 0
   m_Name: TV
-  m_TagString: Untagged
+  m_TagString: Electronics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,5 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 8890821166399119553}
   Value: 500
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}

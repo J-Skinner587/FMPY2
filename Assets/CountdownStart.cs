@@ -38,10 +38,12 @@ public class CountdownStart : MonoBehaviour
         if(timeLeft < 0.5)
         {
             startText.text = "GO!!!";
-            if(timeLeft < 0)
+            if(timeLeft  <= 0.1)
             {
+                if(timeLeft >= -1)
                 mainUI.SetActive(true);
                 counterui.SetActive(false);
+                startText.text = "";
 
                 currentTime -= 1 * Time.deltaTime;
                 timerText.text = currentTime.ToString("0");

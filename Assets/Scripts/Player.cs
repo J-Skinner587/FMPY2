@@ -9,15 +9,7 @@ public class Player : MonoBehaviour
     public float turnSpeed = 8;
     public float mouseSensitivity;
 
-    opencloseDoor close;
-
-    float angle;
-    float smoothInputMagnitude;
-    float smoothMoveVelocity;
-    Vector3 velocity;
-
     public new static Rigidbody rigidbody;
-    bool disabled;
 
     private void Start()
     {

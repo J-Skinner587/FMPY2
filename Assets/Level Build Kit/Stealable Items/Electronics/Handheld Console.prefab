@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8979893829021094851}
   m_Layer: 0
   m_Name: Handheld Console
-  m_TagString: Untagged
+  m_TagString: Electronics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,8 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 6175235209460370027}
   Value: 250
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}
 --- !u!65 &8979893829021094851
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3963779245485048668}
   m_Layer: 0
   m_Name: Monitor
-  m_TagString: Untagged
+  m_TagString: Electronics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,8 +112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 1167177008488376570}
   Value: 100
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}
 --- !u!1 &4155092160825153246
 GameObject:
   m_ObjectHideFlags: 0

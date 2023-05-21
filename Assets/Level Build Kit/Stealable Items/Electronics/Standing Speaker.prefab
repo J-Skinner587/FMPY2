@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: -7553491604737137689}
   m_Layer: 0
   m_Name: Standing Speaker
-  m_TagString: Untagged
+  m_TagString: Electronics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,5 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 6026238721873138722}
   Value: 150
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}

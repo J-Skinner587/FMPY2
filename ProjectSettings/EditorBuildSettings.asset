@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: f4a7fd1d85850e94284e23b3421a4bbc
   - enabled: 1
-    path: Assets/Scenes/TutorialLevel.unity
+    path: Assets/Scenes/Techman.unity
     guid: 41080012a1ef6054da6483c67cb10144
   - enabled: 1
     path: Assets/Scenes/Dorm.unity

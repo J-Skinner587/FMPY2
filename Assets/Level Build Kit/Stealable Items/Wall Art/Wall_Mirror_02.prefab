@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4664335570277901428}
   m_Layer: 0
   m_Name: Wall_Mirror_02
-  m_TagString: Untagged
+  m_TagString: Artwork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,8 +112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 4898012921678761536}
   Value: 100
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}
 --- !u!1 &8554352923314201559
 GameObject:
   m_ObjectHideFlags: 0

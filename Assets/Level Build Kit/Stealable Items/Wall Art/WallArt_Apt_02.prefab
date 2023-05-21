@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: -5672397970514638495}
   m_Layer: 0
   m_Name: WallArt_Apt_02
-  m_TagString: Untagged
+  m_TagString: Artwork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,8 +266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 9001441060891839777}
   Value: 100
+  furniture: 0
+  TotCollected: 0
+  UI: {fileID: 0}
 --- !u!65 &-5672397970514638495
 BoxCollider:
   m_ObjectHideFlags: 0
