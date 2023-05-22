@@ -23,8 +23,11 @@ public class CountdownStart : MonoBehaviour
 
     public GameObject holder;
 
+    public GameObject Guard;
+
     private void Start()
     {
+        Guard.SetActive(false);
         currentTime = startingTime;
         counterui.SetActive(true);
         mainUI.SetActive(false);
@@ -52,6 +55,7 @@ public class CountdownStart : MonoBehaviour
                     currentTime = 0;
                     timerText.text = "Time's Up";
                     Debug.Log("$$ Time Up $$");
+                    Guard.SetActive(true);
                 }
 
                 MoneyText = Total;

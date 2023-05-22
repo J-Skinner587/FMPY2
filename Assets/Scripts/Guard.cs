@@ -34,7 +34,7 @@ public class Guard : MonoBehaviour
         Player.SetActive(true);
         CaughtUI.gameObject.SetActive(false);
         GameUI.gameObject.SetActive(true);
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        Player = GameObject.FindGameObjectWithTag("Player");
         viewAngle = spotlight.spotAngle;
         originalSpotlightColour = spotlight.color;
         //initialize the waypoint
@@ -70,13 +70,13 @@ public class Guard : MonoBehaviour
 
     bool CanSeePlayer()
     {
-        if(Vector3.Distance(transform.position,player.position) < viewDistance)
+        if(Vector3.Distance(transform.position,Player.transform.position) < viewDistance)
         {
-            Vector3 dirToPlayer = (player.position - transform.position).normalized;
+            Vector3 dirToPlayer = (Player.transform.position - transform.position).normalized;
             float angleBetweenGuardAndPlayer = Vector3.Angle (transform.forward, dirToPlayer);
             if(angleBetweenGuardAndPlayer < viewAngle / 2f)
             {
-                if(!Physics.Linecast (transform.position,player.position, viewMask))
+                if(!Physics.Linecast (transform.position,Player.transform.position, viewMask))
                 {
                     return true;
                 }
