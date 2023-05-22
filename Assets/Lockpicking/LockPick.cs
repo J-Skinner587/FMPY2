@@ -29,6 +29,7 @@ public class LockPick : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         newLock();
+        lockCam.SetActive(false);
     }
 
     // Update is called once per frame

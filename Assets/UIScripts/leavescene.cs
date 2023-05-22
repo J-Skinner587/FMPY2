@@ -30,10 +30,10 @@ public class leavescene : MonoBehaviour
     public GameObject EndBackgroundroom;
     public GameObject dot;
 
-    int bronze = 1000;
-    int silver = 2500;
-    int gold = 5000;
-    int platinum = 10000;
+    public int bronze = 1000;
+    public int silver = 2500;
+    public int gold = 5000;
+    public int platinum = 10000;
 
     private void Start()
     {
@@ -46,7 +46,7 @@ public class leavescene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             GameUI.SetActive(false);
             Confirmed();

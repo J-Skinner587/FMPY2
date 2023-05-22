@@ -10,13 +10,14 @@ public class opencloseDoor : MonoBehaviour
     public GameObject player;
     public bool locked;
     public bool lockpick;
-    public GameObject LockCam;
+    GameObject LockCam;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         if (lockpick == true)
         {
+            LockCam = GameObject.FindWithTag("LockCam");
             LockCam.SetActive(false);
         }
 
@@ -39,8 +40,8 @@ public class opencloseDoor : MonoBehaviour
                         }
                         if (lockpick == true)
                         {
-                            Cursor.lockState = CursorLockMode.None;
                             LockCam.SetActive(true);
+                            Cursor.lockState = CursorLockMode.None;
                             Debug.Log("Minigame started");
                             StartCoroutine(Opening());
                             lockpick = false;
