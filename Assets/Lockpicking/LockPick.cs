@@ -28,7 +28,7 @@ public class LockPick : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        newLock();
+        NewLock();
         lockCam.SetActive(false);
     }
 
@@ -91,7 +91,7 @@ public class LockPick : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 player.GetComponent<CharacterController>().enabled = true;
 
-                newLock();
+                NewLock();
             }
             if(keyPressTime == 1)
             {
@@ -102,7 +102,7 @@ public class LockPick : MonoBehaviour
         }
     }
 
-    public void newLock()
+    public void NewLock()
     {
         Debug.Log("new lock made!");
         unlockAngle = Random.Range(-maxAngle + lockRange, maxAngle - lockRange);

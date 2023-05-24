@@ -18,9 +18,8 @@ public class Player : MonoBehaviour
     }
     void Update()
     { 
-        Vector3 inputDirection = Vector3.zero;
         rigidbody.MoveRotation(rigidbody.rotation * Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse X") * mouseSensitivity, 0)));
-        rigidbody.MovePosition(transform.position + (transform.forward * Input.GetAxis("Vertical") * moveSpeed) + (transform.right * Input.GetAxis("Horizontal") * moveSpeed));
+        rigidbody.MovePosition(transform.position + (Input.GetAxis("Vertical") * moveSpeed * transform.forward) + (Input.GetAxis("Horizontal") * moveSpeed * transform.right));
     }
 
     void Disabled()

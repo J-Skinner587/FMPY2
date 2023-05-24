@@ -11,7 +11,7 @@ public class CountdownStart : MonoBehaviour
     public GameObject counterui;
 
     public static float currentTime = 0f;
-    float startingTime = 120f;
+    readonly float startingTime = 120f;
     public TextMeshProUGUI timerText;
 
     public static int Total = 0;

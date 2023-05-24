@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField]
     public GameObject mainmenu;
     public GameObject options;
     public GameObject Controls;

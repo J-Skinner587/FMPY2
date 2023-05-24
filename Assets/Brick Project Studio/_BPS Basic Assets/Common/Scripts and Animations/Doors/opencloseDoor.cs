@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class opencloseDoor : MonoBehaviour
 {
-    [SerializeField]
     public Animator openandclose;
     public bool open;
     public GameObject player;
     public bool locked;
     public bool lockpick;
+ 
+    [SerializeField]
     GameObject LockCam;
 
     void Start()

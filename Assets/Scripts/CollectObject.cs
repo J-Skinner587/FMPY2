@@ -13,8 +13,8 @@ using UnityEngine.SceneManagement;
 
 public class CollectObject : MonoBehaviour
 {
-    [SerializeField]
     public bool collected;
+    [SerializeField]
     GameObject Player;
     GameObject Object;
     public int Value;
@@ -61,7 +61,7 @@ public class CollectObject : MonoBehaviour
         Debug.Log("You Collected" + this.name);
         collected = true;
         yield return new WaitForSeconds(.5f);
-        if(Object.CompareTag("Appliances"))
+        if (Object.CompareTag("Appliances"))
         {
             leavescene.TotalAppliances++;
             CountdownStart.Total += Value;
