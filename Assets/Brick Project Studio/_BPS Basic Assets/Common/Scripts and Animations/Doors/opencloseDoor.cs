@@ -9,9 +9,11 @@ public class opencloseDoor : MonoBehaviour
     public GameObject player;
     public bool locked;
     public bool lockpick;
+
+    public bool furniture;
  
     [SerializeField]
-    GameObject LockCam;
+    public GameObject LockCam;
 
     void Start()
     {
@@ -41,12 +43,13 @@ public class opencloseDoor : MonoBehaviour
                         }
                         if (lockpick == true)
                         {
+                            player.SetActive(false);
                             LockCam.SetActive(true);
                             Cursor.lockState = CursorLockMode.None;
                             Debug.Log("Minigame started");
-                            StartCoroutine(Opening());
                             lockpick = false;
                             locked = false;
+                            StartCoroutine(Opening());
                         }
                         else
                         {

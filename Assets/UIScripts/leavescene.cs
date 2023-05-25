@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class leavescene : MonoBehaviour
 {
@@ -110,5 +111,14 @@ public class leavescene : MonoBehaviour
             nextmedaltext.text = "Unbeatable";
         }
         EndScreen.SetActive(true);
+    }
+    public void Retry()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

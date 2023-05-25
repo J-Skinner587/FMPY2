@@ -11,7 +11,7 @@ public class CountdownStart : MonoBehaviour
     public GameObject counterui;
 
     public static float currentTime = 0f;
-    readonly float startingTime = 120f;
+    public float time = 120f;
     public TextMeshProUGUI timerText;
 
     public static int Total = 0;
@@ -23,15 +23,17 @@ public class CountdownStart : MonoBehaviour
 
     public GameObject holder;
 
+    public GameObject player;
+
     public GameObject Guard;
 
     private void Start()
     {
         Guard.SetActive(false);
-        currentTime = startingTime;
+        currentTime = time;
         counterui.SetActive(true);
         mainUI.SetActive(false);
-
+        player.GetComponent<CharacterController>().enabled = true;
     }
 
     private void Update()
@@ -41,7 +43,8 @@ public class CountdownStart : MonoBehaviour
         if(timeLeft < 0.5)
         {
             startText.text = "GO!!!";
-            if(timeLeft  <= 0.1)
+
+            if (timeLeft  <= 0.1)
             {
                 if(timeLeft >= -1)
                 mainUI.SetActive(true);

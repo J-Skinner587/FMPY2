@@ -15,7 +15,7 @@ public class RandomSpawner : MonoBehaviour
         public float weight;
     }
 
-    public List<Spawnable> items = new List<Spawnable>();
+    public List<Spawnable> items = new();
     float totalWeight;
 
     private void Awake()
@@ -48,8 +48,7 @@ public class RandomSpawner : MonoBehaviour
         }
         else
         {
-            GameObject i = Instantiate(items[chosenIndex].gameObject, transform.position, Quaternion.identity);
+            var i = Instantiate(items[chosenIndex].gameObject, transform.position, Quaternion.identity);
         }
-        
     }
 }

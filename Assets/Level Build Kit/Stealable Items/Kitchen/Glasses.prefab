@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 2811792039861570609}
   m_Layer: 0
   m_Name: Glasses
-  m_TagString: Untagged
+  m_TagString: Appliances
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,8 +287,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.60741657, y: 0.012690559, z: 0.72732455}
-  m_Center: {x: 0, y: 0.0063452646, z: 0}
+  m_Size: {x: 0.6905823, y: 0.012690559, z: 0.8313956}
+  m_Center: {x: -0.016780853, y: 0.0063452646, z: 0.00062680244}
 --- !u!114 &2811792039861570609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,10 +301,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui: {fileID: 0}
   collected: 0
-  Object: {fileID: 8623663115088888519}
+  Player: {fileID: 0}
   Value: 50
+  furniture: 0
+  UI: {fileID: 0}
 --- !u!1001 &709845113148610528
 PrefabInstance:
   m_ObjectHideFlags: 0

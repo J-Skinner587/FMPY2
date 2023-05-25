@@ -14,7 +14,7 @@ public class LockPick : MonoBehaviour
     public float maxAngle = 90;
     public float lockSpeed = 10;
 
-    [Range(1,25)]
+    [Range(1, 25)]
     public float lockRange = 10;
 
     private float eulerAngle;
@@ -29,7 +29,6 @@ public class LockPick : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         NewLock();
-        lockCam.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,7 +36,7 @@ public class LockPick : MonoBehaviour
     {
         transform.localPosition = pickPosition.position;
 
-        if(movePick)
+        if (movePick)
         {
             Vector3 dir = Input.mousePosition - cam.WorldToScreenPoint(transform.position);
 
@@ -52,21 +51,21 @@ public class LockPick : MonoBehaviour
             transform.rotation = rotateTo;
         }
 
-        if(Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             movePick = false;
             keyPressTime = 1;
-            
-            if(lockCam.activeInHierarchy)
+
+            if (lockCam.activeInHierarchy)
             {
                 player.GetComponent<CharacterController>().enabled = false;
             }
         }
-        if(Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.D))
         {
             movePick = true;
             keyPressTime = 0;
-          
+
             if (lockCam.activeInHierarchy)
             {
                 player.GetComponent<CharacterController>().enabled = false;
@@ -80,22 +79,24 @@ public class LockPick : MonoBehaviour
         float lockLerp = Mathf.LerpAngle(innerLock.eulerAngles.z, lockRotation, Time.deltaTime * lockSpeed);
         innerLock.eulerAngles = new Vector3(0, 0, lockLerp);
 
-        if(lockLerp >= maxRotation -1)
+        if (lockLerp >= maxRotation - 1)
         {
             if (eulerAngle < unlockRange.y && eulerAngle > unlockRange.x)
             {
                 Debug.Log("Unlocked!");
-                lockCam.SetActive(false);
                 movePick = true;
                 keyPressTime = 0;
-                Cursor.lockState = CursorLockMode.Locked;
+                lockCam.SetActive(false);
                 player.GetComponent<CharacterController>().enabled = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                player.SetActive(true);
+
 
                 NewLock();
             }
-            if(keyPressTime == 1)
+            if (keyPressTime == 1)
             {
-                
+
                 float randomRotation = Random.insideUnitCircle.x;
                 transform.eulerAngles += new Vector3(0, 0, Random.Range(-randomRotation, randomRotation));
             }

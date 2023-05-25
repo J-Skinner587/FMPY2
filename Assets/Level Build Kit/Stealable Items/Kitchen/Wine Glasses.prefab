@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 7921864101529093204}
   m_Layer: 0
   m_Name: Wine Glasses
-  m_TagString: Untagged
+  m_TagString: Appliances
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ Transform:
   - {fileID: 996840847063376587}
   - {fileID: 6937013733397098697}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1101406462304981815
 MeshFilter:
@@ -204,8 +204,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.60741657, y: 0.012690559, z: 0.72732455}
-  m_Center: {x: 0, y: 0.0063452646, z: 0}
+  m_Size: {x: 0.6747837, y: 0.012690559, z: 0.78968024}
+  m_Center: {x: 0.000998497, y: 0.0063452646, z: -0.01117003}
 --- !u!114 &7921864101529093204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,10 +218,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31d5d8302f416044be72207cc5ee666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui: {fileID: 0}
   collected: 0
-  Object: {fileID: 4420291222505310882}
+  Player: {fileID: 0}
   Value: 50
+  furniture: 0
+  UI: {fileID: 0}
 --- !u!1 &8052964977815018729
 GameObject:
   m_ObjectHideFlags: 0
