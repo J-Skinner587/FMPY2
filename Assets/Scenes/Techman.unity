@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31502572, g: 0.08055828, b: 0.0677642, a: 1}
+  m_IndirectSpecularColor: {r: 0.4045151, g: 0.2276314, b: 0.09670438, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8170,6 +8170,10 @@ PrefabInstance:
       propertyPath: field of view
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 1927095934754023317, guid: a9b081014bad86f4a80b60284279d21b, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 1927095934754023318, guid: a9b081014bad86f4a80b60284279d21b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.85
@@ -11094,7 +11098,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 190208913}
-  lockCam: {fileID: 190208911}
   innerLock: {fileID: 2113427886}
   pickPosition: {fileID: 543662699}
   player: {fileID: 0}

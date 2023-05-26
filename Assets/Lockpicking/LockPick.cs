@@ -5,11 +5,13 @@ using UnityEngine;
 public class LockPick : MonoBehaviour
 {
     public Camera cam;
-    public GameObject lockCam;
     public Transform innerLock;
     public Transform pickPosition;
 
     public GameObject player;
+
+    Camera cam1;
+    Camera cam2;
 
     public float maxAngle = 90;
     public float lockSpeed = 10;
@@ -28,6 +30,15 @@ public class LockPick : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
+
+        cam1 = GameObject.FindWithTag("LockCam").GetComponent<Camera>();
+        cam2 = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+
+        cam2.enabled = cam2.enabled;
+
+        cam1.enabled = !cam1.enabled;
+
+
         NewLock();
     }
 
@@ -55,21 +66,11 @@ public class LockPick : MonoBehaviour
         {
             movePick = false;
             keyPressTime = 1;
-
-            if (lockCam.activeInHierarchy)
-            {
-                player.GetComponent<CharacterController>().enabled = false;
-            }
         }
         if (Input.GetKeyUp(KeyCode.D))
         {
             movePick = true;
             keyPressTime = 0;
-
-            if (lockCam.activeInHierarchy)
-            {
-                player.GetComponent<CharacterController>().enabled = false;
-            }
         }
 
         float percentage = Mathf.Round(100 - Mathf.Abs(((eulerAngle - unlockAngle) / 100) * 100));
@@ -86,8 +87,11 @@ public class LockPick : MonoBehaviour
                 Debug.Log("Unlocked!");
                 movePick = true;
                 keyPressTime = 0;
-                lockCam.SetActive(false);
-                player.GetComponent<CharacterController>().enabled = true;
+
+                player.SetActive(true);
+
+                cam1.enabled = false;
+
                 Cursor.lockState = CursorLockMode.Locked;
                 player.SetActive(true);
 

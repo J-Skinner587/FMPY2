@@ -31,10 +31,10 @@ public class Guard : MonoBehaviour
 
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         Player.SetActive(true);
         CaughtUI.gameObject.SetActive(false);
         GameUI.gameObject.SetActive(true);
-        Player = GameObject.FindGameObjectWithTag("Player");
         viewAngle = spotlight.spotAngle;
         originalSpotlightColour = spotlight.color;
         //initialize the waypoint

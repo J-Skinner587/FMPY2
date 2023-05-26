@@ -57,7 +57,6 @@ public class CountdownStart : MonoBehaviour
                 {
                     currentTime = 0;
                     timerText.text = "Time's Up";
-                    Debug.Log("$$ Time Up $$");
                     Guard.SetActive(true);
                 }
 

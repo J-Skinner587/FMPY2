@@ -13,17 +13,21 @@ public class opencloseDoor : MonoBehaviour
     public bool furniture;
  
     [SerializeField]
-    public GameObject LockCam;
+
+    Camera cam1;
+
+    Camera cam2;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         if (lockpick == true)
         {
-            LockCam = GameObject.FindWithTag("LockCam");
-            LockCam.SetActive(false);
-        }
+            cam1 = GameObject.FindWithTag("LockCam").GetComponent<Camera>();
 
+            cam2 = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        }
+        
         open = false;
     }
     void OnMouseOver()
@@ -43,9 +47,12 @@ public class opencloseDoor : MonoBehaviour
                         }
                         if (lockpick == true)
                         {
-                            player.SetActive(false);
-                            LockCam.SetActive(true);
+                            
                             Cursor.lockState = CursorLockMode.None;
+
+                            cam1.enabled = true;
+                            player.SetActive(false);
+
                             Debug.Log("Minigame started");
                             lockpick = false;
                             locked = false;
