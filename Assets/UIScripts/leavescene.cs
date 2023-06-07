@@ -38,6 +38,12 @@ public class leavescene : MonoBehaviour
 
     private void Start()
     {
+        TotalArtwork= 0;
+        TotalAppliances= 0;
+        TotalElectronics = 0;
+        TotalWine = 0;
+        TotCollected = 0;
+
         EndBackgroundroom.SetActive(false);
         EndScreen.SetActive(false);
         GameUI.SetActive(true);
@@ -79,29 +85,29 @@ public class leavescene : MonoBehaviour
         {
             Debug.Log("Fail");
             titletext.text = "Failure";
-            descriptiontext.text = "You only got $" + CountdownStart.Total + "? We need at least $1000.";
-            nextmedaltext.text = "Bronze is at $1000";
+            descriptiontext.text = "You only got $" + CountdownStart.Total + "? We need at least $" + bronze + ".";
+            nextmedaltext.text = "Bronze is at $" + bronze;
         }
         if (silver >= CountdownStart.Total && CountdownStart.Total > bronze)
         {
             Debug.Log("Bronze Medal Awarded");
             titletext.text = "Bronze";
             descriptiontext.text = "You got $" + CountdownStart.Total + ", but could use a lot more. Did you check the cabinets?";
-            nextmedaltext.text = "Silver is at $2500";
+            nextmedaltext.text = "Silver is at $" + silver;
         }
         if (gold >= CountdownStart.Total && CountdownStart.Total > silver)
         {
             Debug.Log("Silver");
             titletext.text = "Silver";
             descriptiontext.text = "You got $" + CountdownStart.Total + ", but could use a more. ";
-            nextmedaltext.text = "Gold is at $5000";
+            nextmedaltext.text = "Gold is at $" + gold;
         }
         if (platinum >= CountdownStart.Total && CountdownStart.Total > gold)
         {
             Debug.Log("Gold");
             titletext.text = "Gold";
             descriptiontext.text = "You got $" + CountdownStart.Total + ", but could use a bit more. Get the lights off the roof! We need any penny we can get!";
-            nextmedaltext.text = "Platinum is at $10000";
+            nextmedaltext.text = "Platinum is at $" + platinum;
         }
         if (CountdownStart.Total > platinum)
         {
@@ -114,7 +120,7 @@ public class leavescene : MonoBehaviour
     }
     public void Retry()
     {
-        SceneManager.LoadScene(1);
+        
     }
 
     public void Menu()

@@ -29,6 +29,8 @@ public class CountdownStart : MonoBehaviour
 
     private void Start()
     {
+        Total = 0;
+
         Guard.SetActive(false);
         currentTime = time;
         counterui.SetActive(true);

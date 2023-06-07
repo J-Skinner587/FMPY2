@@ -5,7 +5,6 @@ using UnityEngine;
 public class Guard : MonoBehaviour
 {
     public Transform pathHolder;
-    Transform player;
     Color originalSpotlightColour;
 
     public GameObject CaughtUI;
