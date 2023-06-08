@@ -31,11 +31,11 @@ public class CountdownStart : MonoBehaviour
     {
         Total = 0;
 
-        Guard.SetActive(false);
         currentTime = time;
         counterui.SetActive(true);
         mainUI.SetActive(false);
         player.GetComponent<CharacterController>().enabled = true;
+        Guard.SetActive(false);
     }
 
     private void Update()

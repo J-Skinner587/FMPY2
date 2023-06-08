@@ -31,8 +31,8 @@ public class Guard : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        CaughtUI.SetActive(false);
         Player.SetActive(true);
-        CaughtUI.gameObject.SetActive(false);
         GameUI.gameObject.SetActive(true);
         viewAngle = spotlight.spotAngle;
         originalSpotlightColour = spotlight.color;
@@ -157,7 +157,7 @@ public class Guard : MonoBehaviour
 
     public void OnGuardHasSpottedPlayer()
     {
-        Debug.Log("Caught");
+        Cursor.lockState = CursorLockMode.None;
         CaughtUI.gameObject.SetActive(true);
         GameUI.gameObject.SetActive(false);
         Player.gameObject.SetActive(false);

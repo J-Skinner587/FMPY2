@@ -22,11 +22,14 @@ public class CollectObject : MonoBehaviour
 
     public GameObject UI;
 
+    AudioSource source;
+
     void Start()
     {
         leavescene.TotCollected = 0;
         if (!furniture)
         {
+            source = GetComponent<AudioSource>();
             Player = GameObject.FindGameObjectWithTag("Player");
             collected = false;
             Object = this.gameObject;
@@ -94,6 +97,7 @@ public class CollectObject : MonoBehaviour
             CountdownStart.Total += Value;
             Object.SetActive(false);
         }
+        source.Play();
     }
 }
 
