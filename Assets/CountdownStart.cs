@@ -34,7 +34,7 @@ public class CountdownStart : MonoBehaviour
         currentTime = time;
         counterui.SetActive(true);
         mainUI.SetActive(false);
-        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<CharacterController>().enabled = false;
         Guard.SetActive(false);
     }
 
@@ -44,6 +44,7 @@ public class CountdownStart : MonoBehaviour
         startText.text = (timeLeft).ToString("0");
         if(timeLeft < 0.5)
         {
+            player.GetComponent<CharacterController>().enabled = true;
             startText.text = "GO!!!";
 
             if (timeLeft  <= 0.1)

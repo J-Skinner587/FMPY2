@@ -212,7 +212,7 @@ Transform:
   - {fileID: 665210612630235434}
   - {fileID: 177639916605576082}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3188429339195790409
 MeshFilter:
@@ -242,7 +242,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 48852ed51db63954399f7facee033ea4, type: 2}
+  - {fileID: 2100000, guid: 27f834cdb4589be48903c1e529e09c59, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  Object: {fileID: 8913750980977116659}
+  Player: {fileID: 0}
   Value: 100
   furniture: 1
-  Frenzy: 0
+  UI: {fileID: 0}
